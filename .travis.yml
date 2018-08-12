@@ -21,20 +21,20 @@ before_deploy:
 - mkdir -p deploy
 - mv travis-CI.zip deploy/travis-CI.zip
 
-##build된 결과를 S3에 deploy 하도록 설정.
-#deploy:
-#- provider: s3
-#  access_key_id: $AWS_ACCESS_KEY # IAM 사용자 생성시 발급받은 access_key_id
-#  secret_access_key: $AWS_SECRET_KEY # IAM 사용자 생성시 발급받은 secret_access_key
-#  bucket: kookooku-travis-deploy # 생성한 S3 버켓
-#  region: ap-northeast-2  # 리전 설정
-#  skip_cleanup: true
-#  acl: public_read
-#  local_dir: deploy
-#  wait-until-deployed: true
-#  on:
-#    repo: songintae/TravisCI #Github 주소
-#    branch: master  #배포할 브랜치 설정
+#build된 결과를 S3에 deploy 하도록 설정.
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY # IAM 사용자 생성시 발급받은 access_key_id
+  secret_access_key: $AWS_SECRET_KEY # IAM 사용자 생성시 발급받은 secret_access_key
+  bucket: kookooku-travis-deploy # 생성한 S3 버켓
+  region: ap-northeast-2  # 리전 설정
+  skip_cleanup: true
+  acl: public_read
+  local_dir: deploy
+  wait-until-deployed: true
+  on:
+    repo: songintae/TravisCI #Github 주소
+    branch: master  #배포할 브랜치 설정
 
 #notifications을 설정하여 알림을 보낼 수 있다.
 notifications:

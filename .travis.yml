@@ -16,6 +16,7 @@ branches:
 #소스코드가 형상에 배포됬을때 실행할 명령어를 설정한다 (여기선 build를 진행)
 script: "./gradlew clean build"
 
+#deploy하기 전에 해야할 동작을 입력한다. 아래서는 zip파일로 만든 후 deploy 디렉터리에 압축된 파일을 옮겨놓는다.
 before_deploy:
 - zip -r travis-CI *
 - mkdir -p deploy
@@ -30,7 +31,7 @@ deploy:
   region: ap-northeast-2  # 리전 설정
   skip_cleanup: true
   acl: public_read
-#  local_dir: deploy
+  local_dir: deploy #S3에 배포할 파일이 있는 디렉터리를 설정.
   wait-until-deployed: true
   on:
     repo: songintae/TravisCI #Github 주소

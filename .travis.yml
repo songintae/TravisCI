@@ -1,19 +1,38 @@
+#언어 및 jdk 설정
 language: java
 jdk:
-  - openjdk8
+- openjdk8
 
+#푸쉬됬을 때 Travis를 통해 빌드 및 테스트를 자동화할 브랜치를 설정
 branches:
   only:
   - master
-
+# gradle 파일을 cache 하여 변경사항이 없다면 배포할때 캐쉬에 있는 설정을 이용하도록한다.
 cache:
   directories:
   - '$HOME/.m2/repository'
   - '$HOME/.gradle'
 
+#소스코드가 형상에 배포됬을때 실행할 명령어를 설정한다 (여기선 build를 진행)
 script: "./gradlew clean build"
 
+
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+  secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+  bucket: kookooku-travis-deploy # 6-3-3에서 생성한 S3 버킷
+  region: ap-northeast-2
+  skip_cleanup: true
+  acl: public_read
+  wait-until-deployed: true
+  on:
+    repo: songintae/TravisCI #Github 주소
+    branch: master
+
+#notifications을 설정하여 알림을 보낼 수 있다.
 notifications:
-  email :
+  email:
     recipients:
     - songintae92@gmail.com
+

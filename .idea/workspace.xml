@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bec75eb4-6b88-44d6-81f0-f840e380e054" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -47,6 +47,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="6" />
+          <entry key="html" value="1" />
           <entry key="xml" value="10" />
           <entry key="yml" value="926" />
         </counts>
@@ -64,6 +65,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="6" />
+          <entry key="HTML" value="1" />
           <entry key="XML" value="10" />
           <entry key="YAML" value="926" />
         </counts>
@@ -72,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -99,9 +101,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -582,6 +588,7 @@
         <option value="$PROJECT_DIR$/appspec.xml" />
         <option value="$PROJECT_DIR$/appspec.yml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
       </list>
     </option>
   </component>
@@ -673,7 +680,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534067014319" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534067074459" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -737,18 +744,18 @@
       <updated>1534002858580</updated>
       <workItem from="1534002862390" duration="30000" />
       <workItem from="1534002929927" duration="4255000" />
-      <workItem from="1534051998062" duration="3081000" />
+      <workItem from="1534051998062" duration="3139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7366000" />
+    <option name="totallyTimeSpent" value="7424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -765,7 +772,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.37580645" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -792,9 +799,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -840,7 +844,14 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
         </state>
       </provider>
     </entry>

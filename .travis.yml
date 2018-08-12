@@ -37,6 +37,20 @@ deploy:
     repo: songintae/TravisCI #Github 주소
     branch: master  #배포할 브랜치 설정
 
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY # IAM 사용자 생성시 발급받은 access_key_id
+  secret_access_key: $AWS_SECRET_KEY # IAM 사용자 생성시 발급받은 secret_access_key
+  bucket: kookooku-travis-deploy # 생성한 S3 버켓
+  key: travis-CI.zip # 빌드 파일을 압축해서 전달
+  bundle_type: zip
+  application: travis-ci-deploy # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+  deployment_group: travis-ci-deploy-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+  region: ap-northeast-2
+  wait-until-deployed: true
+  on:
+    repo: songintae/TravisCI #Github 주소
+    branch: master  #배포할 브랜치 설정
+
 #notifications을 설정하여 알림을 보낼 수 있다.
 notifications:
   email:

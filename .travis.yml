@@ -16,6 +16,10 @@ cache:
 #소스코드가 형상에 배포됬을때 실행할 명령어를 설정한다 (여기선 build를 진행)
 script: "./gradlew clean build"
 
+before_deploy:
+- zip -r travis-CI *
+- mkdir -p deploy
+- mv travis-CI.zip deploy/travis-CI.zip
 
 deploy:
 - provider: s3
@@ -25,6 +29,7 @@ deploy:
   region: ap-northeast-2
   skip_cleanup: true
   acl: public_read
+  local_dir: deploy
   wait-until-deployed: true
   on:
     repo: songintae/TravisCI #Github 주소

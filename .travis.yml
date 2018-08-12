@@ -30,7 +30,7 @@ deploy:
   region: ap-northeast-2  # 리전 설정
   skip_cleanup: true
   acl: public_read
-  local_dir: deploy
+#  local_dir: deploy
   wait-until-deployed: true
   on:
     repo: songintae/TravisCI #Github 주소
